@@ -1,0 +1,42 @@
+---
+title: "First Attempt at SAS"
+author: "Barry DeCicco"
+date: "May 28, 20018"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(SASmarkdown)
+library(ggplot2)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r, engine='sashtml', engine.path="C:/Program Files/SASHome/SASFoundation/9.4/sas.exe", engine.opts="-nosplash -linesize 75", comment=""}
+
+
+
+proc means data=sashelp.class;
+run;
+
+proc freq data=sashelp.class;
+    tables sex;
+run;
+```
+
+```{r ggplot_mpg}
+
+
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))
+
+```
