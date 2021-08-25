@@ -1,5 +1,5 @@
 
-libname a 'C:\Users\Barry\Documents\SAS Playground\SAS and R\Data Sets';
+libname a 'C:\Users\decicco1\OneDrive - Michigan State University\CSTATRedirects\Documents\R Studio Projects\SASandRandSAS\data';
 run;
 
 
