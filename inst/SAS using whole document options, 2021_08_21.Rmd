@@ -3,9 +3,9 @@ title: "SAS using whole document options, 2021_08_21.Rmd"
 author: "Barry DeCicco"
 date: "`r format(Sys.time(), '%Y-%m-%d, %H:%M:%S %Z')`"
 output:
-  html_document: default
-  pdf_document: default
   word_document: default
+  pdf_document: default
+  html_document: default
 ---
   
 ```{r setup, include=FALSE}
