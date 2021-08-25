@@ -7,23 +7,21 @@ output:
   pdf_document: default
   word_document: default
 ---
-
+  
 ```{r setup, include=FALSE}
 
 library(SASmarkdown)
-library(ggplot2)
-
 
 saspath <- "C:/Program Files/SASHome/SASFoundation/9.4/sas.exe"
 sasopts <- "-nosplash -linesize 75"
 
-knitr::opts_chunk$set(engine="sashtml", 
-engine.path=saspath, 
+knitr::opts_chunk$set(engine="sashtml",engine.path=saspath, 
+
 engine.opts=sasopts, 
 comment=NA, 
 echo = TRUE)
-
 ```
+
 
 ## R Markdown
 
@@ -32,7 +30,6 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 ```{sas sas_1}
-
 proc means data=sashelp.class;
 run;
 
@@ -40,5 +37,4 @@ proc freq data=sashelp.class;
     tables sex;
 run;
 ```
-  
-
+ 
