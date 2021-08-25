@@ -2,15 +2,15 @@
 proc options option=rlang; 
 run;
 
-libname a "C:\Users\decicco1\OneDrive - Michigan State University\CSTATRedirects\Documents\CSTAT\Workshops\SAS and R and SAS\Data Sets";
+libname a "C:\Users\decicco1\OneDrive - Michigan State University\CSTATRedirects\Documents\R Studio Projects\SASandRandSAS\data";
 run;
 
 
 Proc IML;
+	title "Statistics in R (integration with SAS)";
 
-title "Statistics in R (integration with SAS)";
-
-run ExportDataSetToR("a.RCBD_TEST", "RCBD_IN_R");
+run;
+ExportDataSetToR("a.RCBD_TEST", "RCBD_IN_R");
 
 submit / R;
 
