@@ -7,10 +7,10 @@ run;
 
 
 Proc IML;
-	title "Statistics in R (integration with SAS)";
 
-run;
-ExportDataSetToR("a.RCBD_TEST", "RCBD_IN_R");
+* title "Statistics in R (integration with SAS)";
+
+call ExportDataSetToR("a.RCBD_TEST", "RCBD_IN_R");
 
 submit / R;
 
@@ -20,7 +20,7 @@ submit / R;
 # Change the working directory, saving the old one in ‘old_wd’
 
 
-old_wd <- setwd("C:/Users/decicco1/OneDrive - Michigan State University/CSTATRedirects/Documents/CSTAT/Workshops/SAS and R and SAS/Data Sets")
+old_wd <- setwd("C:/Users/decicco1/OneDrive - Michigan State University/CSTATRedirects/Documents/R Studio Projects/SASandRandSAS")
 
 # Confirm by printing the workding directory:
 getwd()
@@ -28,7 +28,7 @@ getwd()
 # Load the ggplot2 module (package), so that it can be used.
  library(ggplot2) 
 
-# Create a data frame (data set)
+# Create a data frame (data set):
 
 d2 <- data.frame(y = rnorm(144, 12, 3),
                  expand.grid(x = seq.Date(as.Date('2021-1-1'),
@@ -49,7 +49,7 @@ ggplot(d2, aes(x=x, y=y)) +
 
 
 # Direct the graphics output to a file, then close it.
-dev.copy(pdf,'myplot.pdf',width=6,height=4 )
+dev.copy(png,'Figures/myplot.png')
 dev.off()  
 
 
